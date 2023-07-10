@@ -1,0 +1,70 @@
+A.
+SELECT * 
+FROM Customers
+
+B.
+SELECT * 
+FROM Orders
+
+C.
+SELECT *
+FROM Customers
+WHERE CustomerID="25"
+
+
+D.
+SELECT *
+FROM Orders
+limit 10
+
+E.
+SELECT *
+FROM customers
+WHERE Country='Spain' or country='Germany';
+
+F.
+SELECT *
+FROM customers
+Order By Country
+
+G.
+Insert into Customers (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country)
+Values ('92', 'Shruti Yadav', 'XYZ', 'Wollank', 'Berlin', '13359', 'Germany');
+
+
+H.
+SELECT * 
+FROM Products
+Order By Price desc
+
+I.
+SELECT PostalCode, City, Country
+from customers;
+
+J.
+SELECT PostalCode as ZipCode, City, Country
+from customers;
+
+K.
+SELECT distinct City
+FROM Customers;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+A.
+SELECT max(price) 
+FROM Products;
+
+B.
+SELECT avg(price) 
+FROM Products;
+
+C.
+SELECT sum(price) 
+FROM Products;
+
+D.
+SELECT City, COUNT(CustomerId) 
+FROM customers
+GROUP BY city
+ORDER BY city desc
+
+E.
+SELECT *
+FROM customers
+WHERE city IN ('Berlin', 'London', 'Madrid');
+
+F.
+SELECT *
+FROM products
+WHERE ProductName Like '%Queso%';
+
+G.
+SELECT a.customerID, a.CustomerName, b.OrderID, c.OrderDetailID, c.Quantity, d.ProductName
+FROM Customers as a
+JOIN Orders as b
+JOIN OrderDetails as c
+JOIN products as d
+ON a.CustomerID=b.CustomerID and c.OrderID=b.OrderID and d.ProductID=c.ProductID
+
+H.
+SELECT b.FirstName, b.LastName, a.OrderID
+FROM Orders as a
+left JOIN Employees as b
+ON a.EmployeeID=b.EmployeeID
+order by OrderID 
+
+I.
+SELECT ProductName,Price,  
+CASE
+WHEN price<30 then 'Not So Expensive'
+WHEN price>80 then "Very Expensive"
+WHEN price<79 and price>29 then "A little bit Expensive"
+END
+AS Pricyness
+FROM Products;
+
+J.
+SELECT FirstName, LastName, BirthDate
+FROM Employees
+Where BirthDate between 1960 and 1963
+
+
